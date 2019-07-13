@@ -1,0 +1,18 @@
+language: python
+python:
+- 3.6
+- 3.5
+- 3.4
+- 2.7
+install: pip install -U tox-travis
+script: tox
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: mtllrr
+  password:
+    secure: ai1K6ls6pod8T4etyGpkk6WZYj21cHt65Ur8m7yZDWM3b8OAiWyYh/EDgUUeoaDDdWRp3ZwEcoyv7Dg1ih5fLoHxHKNGmEv6+b94UF7rvG5J7r/51GCosVHnjaJSioQd7ls3M3LqEvWOzF+4lGTM3vSMl2I0VsWSwcNpZLBjPo7+9Y57ADMoRvn59nnRf3lItfIlFQEKop/S5HVJMEroi/IAdgYseooMobrpJch+5DG4GUTgnDXMNCTRkaiQkha5O7hAkZSxhtamnwaspuJJ6H/FCoPuHeZbetWLPuVU6R4hWUJt5dCHxMNETDa4kFDSUiC7VPh+aie/NukG+4uu1gWNLJiw50gByWMvECRtsjI+1blcn8x1VL2pgO+7G9u7c4LJFNpyjJGv4VUywv1ZfiQ941BG67XYV76eCtL/4otcUeF/dbu2Wd/U7AQhL/vTULm+3kmUV3BX6l+AjKoj4P/aWtW35qQdSbodfxJ/TAj1EhHTrj54zm5ilvb8CQmaMODuy7ep380Xl1eznFPg/vMM/UD9FX+I6sRdB1QNmtdxbb/0e0PegP3D461qmVjTY8Mj0Vf5eosJaGpLXHUwNR0UyyTIpJ8uZK8A62FV5kfQs8dcPgRMrLtmA0e3iIyFwtFy9GTiXmKfLCigfkyBLCzCY4vmn//GTDVNG9tjxew=
+  on:
+    tags: true
+    repo: mtllrr/topyngs
+    python: 3.6
